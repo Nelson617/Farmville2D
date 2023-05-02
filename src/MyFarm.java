@@ -25,7 +25,8 @@ public class MyFarm {
         //call methods here
         totalPlants();
         printPlantNames();
-
+        totalCarrots();
+        averageNumberOfPlants();
 
     }
 
@@ -35,12 +36,9 @@ public class MyFarm {
         for (int e = 0; e < grid.length; e++) {
             for (int c = 0; c < grid[e].length; c++) {
                 sumOfPlants += grid[e][c].NumberOfPlants;
-
-
             }
         }
         System.out.println(sumOfPlants);
-
     }
 
     public void printPlantNames() {
@@ -50,9 +48,29 @@ public class MyFarm {
             for (int c = 0; c < grid[r].length; c++) {
                 System.out.println("row: " + r + " col: " + c + " " + grid[r][c].PlantName);
             }
+        }
+    }
 
+    public void totalCarrots() {
+        // how many total carrot plants are there?
+        int sumOfcarrots = 0;
+        for (int h = 0; h < grid.length; h++) {
+            for (int k = 0; k < grid[h].length; k++) {
+                if (grid[h][k].PlantName.equals("carrot")) {
+                    sumOfcarrots += grid[h][k].NumberOfPlants;
+
+                }
+
+            }
 
         }
+        System.out.println("The total carrots are " + sumOfcarrots);
+    }
+
+    public void averageNumberOfPlants() {
+        // what is the average number of plants across the whole row?
+        average =
+
 
     }
 }
