@@ -19,10 +19,10 @@ public class Plot {
         } else {
             PlantName = "empty";
             NumberOfPlants = 0;
-
         }
     }
+
     public void printPlot(){
-        System.out.println("the plot has " + NumberOfPlants + " of " + PlantName + " and  ");
+        System.out.println("the plot has " + NumberOfPlants + " of " + PlantName + " and it is " +NeedsWater+" that it needs water  ");
     }
 }

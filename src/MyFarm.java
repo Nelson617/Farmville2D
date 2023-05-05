@@ -69,9 +69,15 @@ public class MyFarm {
 
     public void averageNumberOfPlants() {
         // what is the average number of plants across the whole row?
-        average =
-
-
+            int numOfPlants = 0;
+            int totalPlants = 0;
+            for (int z = 0; z < grid.length; z++) {
+                for (int g = 0; g < grid[z].length; g++) {
+                    numOfPlants += grid [z][g].NumberOfPlants;
+                    totalPlants = totalPlants +1 ;
+                }
+            }
+        System.out.println("the average number of plants is" + numOfPlants/totalPlants);
     }
 }
 
