@@ -1,7 +1,5 @@
 public class MyFarm {
-    public static void main(String[] arge) {
-        MyFarm charlie = new MyFarm();
-    }
+
 
     public Plot[][] grid;
 
@@ -79,7 +77,7 @@ public class MyFarm {
                 totalPlants = totalPlants + 1;
             }
         }
-        System.out.println("the average number of plants is " + numOfPlants / totalPlants);
+        System.out.println("The average number of plants is " + numOfPlants / totalPlants);
     }
 
     public void plotWithMaxNumber() {
@@ -95,7 +93,7 @@ public class MyFarm {
                 }
             }
         }
-        System.out.println(name + "has the most plants with a total of " + maxNumber + " plants");
+        System.out.println(name + " has the most plants with a total of " + maxNumber + " plants");
     }
 
     public void plantWithMaxNumber() {
@@ -142,7 +140,6 @@ public class MyFarm {
             System.out.println("Sunflower has the most plants with " + numSunflower + " plants");
         }
         else{
-            System.out.println("idk");
         }
 
     }
