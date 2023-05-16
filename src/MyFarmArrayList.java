@@ -3,13 +3,17 @@ import java.util.ArrayList;
 public class MyFarmArrayList {
 
     public ArrayList<Plot> row = new ArrayList<Plot>(); //array list
-    public Plot[] arr = new Plot[10]; //array
     public MyFarmArrayList(){
         System.out.println("my farm using array list");
 
-        arr[0] = new Plot();
-       // arr[0].printPlot();
 
+
+//        for(Plot a : row) {
+//
+//            System.out.println(row.size());
+//            row.add(new Plot());
+//            a.printPlot();
+//        }
 
         for(int p = 0; p <10; p++) {
 
@@ -17,8 +21,59 @@ public class MyFarmArrayList {
             row.add(new Plot());
             row.get(p).printPlot();
         }
-        row.add(new Plot());
+//        row.add(new Plot());
 
         System.out.println(row.size());
+
+        totalplants();
+        printPlantNames();
+        addSunflower();
+        addcorn();
     }
+
+    public void totalplants() {
+        // how many total plants are there in the row?
+
+        int total = 0;
+
+        for(Plot a: row){
+            total += a.NumberOfPlants;
+        }
+
+        System.out.println("total plant in my farm is " + total);
+
+
+    }
+
+    public void printPlantNames() {
+        // print the names of each plant in the row and its index
+        for(int k = 0; k < row.size(); k++){
+            System.out.print(k + ": " + row.get(k).PlantName + " \t");
+        }
+        System.out.println();
+    }
+
+
+    public void addSunflower(){
+        Plot sunflower = new Plot();
+        sunflower.PlantName = "sunflower";
+        sunflower.NumberOfPlants = 42;
+        sunflower.NeedsWater = true;
+        sunflower.printPlot();
+
+        row.add(sunflower);
+        printPlantNames();
+
+    }
+    public void addcorn() {
+        Plot corn = new Plot();
+        corn.PlantName = "corn";
+        corn.NumberOfPlants = 70;
+        corn.NeedsWater = false;
+        corn.printPlot();
+
+        row.add(3, corn);
+        printPlantNames();
+    }
+
 }
