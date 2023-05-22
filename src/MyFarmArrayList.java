@@ -29,6 +29,8 @@ public class MyFarmArrayList {
         printPlantNames();
         addSunflower();
         addcorn();
+        tomatolocations();
+        totalCarrots();
     }
 
     public void totalplants() {
@@ -74,6 +76,21 @@ public class MyFarmArrayList {
 
         row.add(3, corn);
         printPlantNames();
+    }
+
+    public void tomatolocations() {
+
+        for(int m = 0; m < row.size(); m++){
+
+            if(row.get(m).PlantName.equals("tomato")){
+                System.out.println(m);
+            }
+
+        }
+    }
+
+    public void totalCarrots() {
+       // for()
     }
 
 }
