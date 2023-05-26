@@ -31,6 +31,10 @@ public class MyFarmArrayList {
         addcorn();
         tomatolocations();
         totalCarrots();
+        printRowInfo();
+        everyOtherNeedsWater();
+        printRowInfo();
+
     }
 
     public void totalplants() {
@@ -54,6 +58,13 @@ public class MyFarmArrayList {
         }
         System.out.println();
     }
+    public void printRowInfo(){
+        for(Plot a: row)
+        {
+            a.printPlot();
+        }
+    }
+
 
 
     public void addSunflower(){
@@ -90,7 +101,23 @@ public class MyFarmArrayList {
     }
 
     public void totalCarrots() {
-       // for()
+        int total = 0;
+
+        for(Plot a: row){
+            total += a.total;
+
+
+    }
+
+    public void everyOtherNeedsWater() {
+
+        for(int n = 0; n< row.size(); n++){
+            if(n % 2 == 1){ //ni is odd
+                row.get(n).NeedsWater = false;
+            } else{
+                row.get(n).NeedsWater = true;
+            }
+        }
     }
 
 }
